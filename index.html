@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--
+  =====================================================================
+  PERSONAL HOMEPAGE — index.html
+  University Assignment: CSE391
+  Author: [Your Full Name]
+  Description: A two-column personal portfolio website built with
+               semantic HTML5, modern CSS3, and Vanilla JavaScript.
+  =====================================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal homepage and portfolio of [Your Full Name], CSE student.">
+    <title>[Your Full Name] | Personal Homepage</title>
+
+    <!-- ================= EXTERNAL CSS (main stylesheet) ================= -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts: Sora for headings, Inter for body, JetBrains Mono for code-style accents -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons (CDN) for sidebar quick links, social icons, etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--
+      INTERNAL CSS (used exactly once per assignment requirement).
+      This rule fine-tunes the scrollbar appearance and is small enough
+      that it doesn't warrant its own external stylesheet entry.
+    -->
+    <style>
+        /* Internal CSS — custom scrollbar styling for the main content panel */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--color-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         MOBILE NAVIGATION TOGGLE (hamburger button, visible on small screens)
+         ============================================================ -->
+    <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- ============================================================
+         LEFT SIDEBAR — fixed/sticky, contains profile + navigation
+         ============================================================ -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Profile photo, name, title, short intro -->
+        <div class="profile-block">
+            <img src="portfolioo.jpeg"  class="profile-photo">
+            <h1 class="profile-name">Md.Asadullah-Al-Galib</h1>
+            <p class="profile-title">Computer Science  Undergraduate</p>
+            <p class="profile-intro">
+                Aspiring software engineer who enjoys building clean, functional web
+                experiences and solving real-world problems with code.
+            </p>
+        </div>
+
+        <!-- Primary anchor navigation -->
+        <nav class="main-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#personal-info" class="nav-link">Personal Info</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Technical Skills</a></li>
+                <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#sports" class="nav-link">Sports</a></li>
+                <li><a href="#extracurricular" class="nav-link">Extracurricular</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        </div>
+
+    </aside>
+
+    <!-- ============================================================
+         RIGHT MAIN CONTENT — all page sections live here
+         ============================================================ -->
+    <main class="main-content">
+
+        <!-- ============== HERO SECTION ============== -->
+        <section id="home" class="section hero-section">
+            <p class="eyebrow">$ welcome</p>
+            <h2 class="hero-heading">Hi, I'm <span class="text-accent">Galib</span></h2>
+            <p class="hero-subtext">
+                A Computer Science student 
+                who loves turning ideas into clean and working software .
+                
+            </p>
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+        </section>
+
+        <!-- ============== PERSONAL INFORMATION ============== -->
+        <section id="personal-info" class="section">
+            <p class="eyebrow">-> personal-info</p>
+            <h2 class="section-heading">Personal Information</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h3>Name</h3>
+                    <p>Md.Asadullah-Al-Galib</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <h3>Student ID</h3>
+                    <p>23101404</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Department</h3>
+                    <p>Computer Science </p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>University</h3>
+                    <p>BRAC University</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>asadullahalgalib2004@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Contact Info.</h3>
+                    <p>+880 1701596396</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Address</h3>
+                    <p>Dhaka, Bangladesh</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-flag"></i>
+                    <h3>Nationality</h3>
+                    <p>Bangladeshi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== ABOUT ME ============== -->
+        <section id="about" class="section">
+            <p class="eyebrow">-> about-me</p>
+            <h2 class="section-heading">About Me</h2>
+
+            <div class="about-text">
+                <p>
+                    I am a <strong>Computer Science </strong> undergraduate at
+                    <strong>BRAC University</strong> with a strong interest in <em>web development</em>,
+                    <em>problem solving</em>, AI/ML and building software that genuinely helps people.
+                    My curiosity for how things work has pushed me to explore everything from
+                    front-end design to backend logic.
+                </p>
+                <p>
+                    Outside the classroom, I enjoy participating in <strong>programming contests</strong>,
+                    contributing to <em>open-source</em> projects, and constantly learning new
+                    technologies. I believe that consistent practice and curiosity are the two most
+                    important ingredients for growth as a developer.
+                </p>
+                <p>
+                    I'm currently sharpening my skills in <strong>full-stack web development</strong> and
+                    actively looking for opportunities to collaborate on meaningful projects,
+                    whether through internships, hackathons, or open-source contributions.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== EDUCATION (Timeline) ============== -->
+        <section id="education" class="section">
+            <p class="eyebrow">-> education</p>
+            <h2 class="section-heading">Education</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>University</h3>
+                        <span class="timeline-date">2023 — Present</span>
+                        <p><strong>BRAC University</strong> — B.Sc. in Computer Science </p>
+                        <p>Currently maintaining a strong academic record while actively participating in tech clubs and contests.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>HSC (Higher Secondary Certificate)</h3>
+                        <span class="timeline-date">2021 — 2023</span>
+                        <p><strong>Dinajpur Govt. College</strong> — Science Group</p>
+                        <p>Completed HSC with a focus on Physics, Chemistry, and Higher Mathematics.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <span class="timeline-date">2019 — 2021</span>
+                        <p><strong>Dinajpur Zilla School</strong> — Science Group</p>
+                        <p>Completed SSC with distinction, building a strong foundation in core sciences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== TECHNICAL SKILLS ============== -->
+        <section id="skills" class="section">
+            <p class="eyebrow">-> technical-skills</p>
+            <h2 class="section-heading">Technical Skills</h2>
+
+            <div class="skills-list">
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>Artificial Intelligence</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>Python</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>HTML</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>CSS</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>JavaScript</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>C++</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>AI/ML</span></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-label"><span>MySQL</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============== HOBBIES ============== -->
+        <section id="hobbies" class="section">
+            <p class="eyebrow">-> hobbies</p>
+            <h2 class="section-heading">Hobbies</h2>
+            
+
+            <div class="card-grid">
+                <div class="hobby-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&q=80" alt="Camera used for photography hobby" loading="lazy">
+                    <div class="hobby-card-body">
+                        <h3>Photography</h3>
+                        <p>Capturing everyday moments and landscapes through the lens.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Suitcase and map representing traveling hobby" loading="lazy">
+                    <div class="hobby-card-body">
+                        <h3>Traveling</h3>
+                        <p>Exploring new places, cultures, and cuisines whenever possible.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Stack of books representing reading hobby" loading="lazy">
+                    <div class="hobby-card-body">
+                        <h3>Reading</h3>
+                        <p>Enjoying tech blogs, sci-fi novels, and personal development books.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FAVORITE SPORTS ============== -->
+        <section id="sports" class="section">
+            <p class="eyebrow">-> sports</p>
+            <h2 class="section-heading">Favorite Sports</h2>
+
+            <div class="card-grid icon-card-grid">
+                <div class="icon-card">
+                    <i class="fa-solid fa-baseball-bat-ball"></i>
+                    <h3>Cricket</h3>
+                    <p>Following local and international matches, and playing with friends on weekends.</p>
+                </div>
+                <div class="icon-card">
+                    <i class="fa-solid fa-futbol"></i>
+                    <h3>Football</h3>
+                    <p>Watching the major leagues and joining casual matches with classmates.</p>
+                </div>
+                <div class="icon-card">
+                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                    <h3>Badminton</h3>
+                    <p>A favorite way to stay active and relieve stress between study sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== EXTRACURRICULAR ACTIVITIES ============== -->
+        <section id="extracurricular" class="section">
+            <p class="eyebrow">-> extracurricular</p>
+            <h2 class="section-heading">Extracurricular Activities</h2>
+
+            <div class="card-grid">
+                <div class="activity-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Programming Contest</h3>
+                    <p>Participating in university and online contests to sharpen problem-solving skills.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>Volunteering</h3>
+                    <p>Taking part in community service initiatives and university volunteer programs.</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fa-solid fa-camera-retro"></i>
+                    <h3>Photography Club</h3>
+                    <p>Active member contributing to club exhibitions and campus event coverage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== PROJECTS ============== -->
+        <section id="projects" class="section">
+            <p class="eyebrow">-> projects</p>
+            <h2 class="section-heading">Projects</h2>
+
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaiuzscT17E-SDVurJK_10igrEQjoWDaQMJWvqVQCFow&s=10" alt="Screenshot placeholder for project one" loading="lazy">
+                    <div class="project-card-body">
+                        <h3>Civic Resolve</h3>
+                        <p>
+                            CivicResolve is a web-based platform designed to help citizens report and resolve local civic issues efficiently. It allows users to submit complaints, track progress, and communicate with responsible authorities, making community problem-solving more organized and transparent.
+                        </p>
+                        <a href="pages/projects.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT8QIEHo1CGAVT5kcRqzuKAwi1BVDZk9FkVvKFLTyUkQ&s=10" alt="Screenshot placeholder for project two" loading="lazy">
+                    <div class="project-card-body">
+                        <h3>Blood Donation Management System</h3>
+                        <p>
+                            A web application designed to streamline the process of managing blood donation drives and tracking donor information. It provides a user-friendly interface for donors to register, schedule donations, and view their donation history.
+                        </p>
+                        <a href="pages/projects.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FAVORITE QUOTE ============== -->
+        <section class="section quote-section">
+            <blockquote class="quote-box">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p>"Code is like humor. When you have to explain it, it's bad."</p>
+                <cite>— Cory House</cite>
+            </blockquote>
+        </section>
+
+        <!-- ============== CONTACT ============== -->
+        <section id="contact" class="section">
+            <p class="eyebrow">-> contact</p>
+            <h2 class="section-heading">Get In Touch</h2>
+
+            <div class="contact-wrapper">
+
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-envelope"></i> asadullahalgalib2004@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +880 1701596396</p>
+                    <p><i class="fa-brands fa-github"></i> <a href="https://github.com" target="_blank" rel="noopener noreferrer">https://github.com/Gullyyboy</a></p>
+
+                    <p><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p>
+                </div> 
+
+            </div>
+        </section>
+
+<footer>
+
+    <p>&copy; 2026 Galib. All Rights Reserved.</p>
+
+    <p id="pageLocation"></p>
+    <p id="lastModified"></p>
+
+</footer>
+
+<script src="script.js"></script>        
